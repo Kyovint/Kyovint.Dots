@@ -16,11 +16,10 @@ config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 config.default_prog = { "zellij" }
 
-
 local mux = wezterm.mux
 wezterm.on("gui-startup", function(cmd)
-    local tab, pane, window = mux.spawn_window(cmd or {})
-    window:gui_window():maximize()
+	local tab, pane, window = mux.spawn_window(cmd or {})
+	window:gui_window():maximize()
 end)
 
 config.window_frame = {
